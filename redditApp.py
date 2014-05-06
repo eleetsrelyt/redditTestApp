@@ -12,3 +12,8 @@ def greaterthan(sub='python', n=10, k=5):
     for x in submissions:
         if int(str(x)[0:str(x).find(' ')]) >= k:
             print x
+
+def titleonly(sub='python', n=10):
+    submissions = r.get_subreddit(sub).get_hot(limit=n)
+    for x in submissions:
+        print str(x)[str(x).find(' :: ')+4:]
